@@ -1,0 +1,420 @@
+:root { /* Variaveis globais. Aqui se define o nome e valor da variavel. Se chama por: var(--nome-da-variavel); */
+    --cor-primaria: #0A1128;
+    --cor-branca: #FFFFFF;
+    --gap: 3rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; /* Transformando 1rem em 10px, para não precisar usar px. */
+    scroll-behavior: smooth;
+}
+
+/*
+Essas foram as fontes que pegamos no Google Fonts: 
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+*/
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    color: var(--cor-primaria);
+    line-height: 1.6; /* Espaçamento entre as linhas. */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-size: 6rem;
+    text-transform: uppercase; /* Colocando todas as letras em caixa alta no h1. */
+}
+
+h2 {
+    font-size: 6rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    line-height: 1.3;
+}
+
+h3 {
+    font-size: 5rem;
+}
+
+h4 {
+    font-size: 4.5rem;
+}
+
+h5 {
+    font-size: 4rem;
+}
+
+h6 {
+    font-size: 3.5rem;
+}
+
+a {
+    text-decoration: none; 
+}
+
+p {
+    margin-bottom: 3rem;
+    font-size: 2.2rem;
+}
+
+table {
+    margin: 0;
+    width: 100%;
+    min-width: 36rem;
+    border-collapse: collapse; /* Para colar as bordas. */
+}
+
+table caption {
+    font-style: italic;
+    font-size: 1.6rem;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+table td, table th {
+    white-space: nowrap; /* Para não quebrar o texto na linha da tabela. */
+    text-align: left;
+    padding: 1rem;
+    border: 0.1rem solid rrgba(195, 194, 194, 0.822);
+}
+
+tfoot td, table th {
+    background: rgba(195, 194, 194, 0.822);
+}
+
+.main-bg {
+    background-image: url('../IMG/imagem-de-fundo.svg');
+    background-size: cover;
+    background-position: center center;
+    color: var(--cor-branca);
+}
+
+.white-bg {
+    background-color: var(--cor-branca);
+    color: var(--cor-primaria);
+}
+
+.main-content {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 6rem var(--gap);
+}
+
+.section {
+    min-height: 100vh;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    z-index: 1;
+    border-bottom: 0.1rem solid grey;
+}
+
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.menu h1 {
+    font-size: 2.3rem;
+    color: var(--cor-primaria);
+}
+
+.menu h1 a {
+    color: inherit;
+}
+
+h1 a:hover {
+    transition: all 700ms ease-in-out;
+    color: rgba(255, 0, 0, 0.849);
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu ul li a {
+    display: block;
+    padding: 2rem;
+    font-size: 1.8rem;
+    color: var(--cor-primaria);
+    position: relative;
+}
+
+.menu ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    width: 0;
+    height: 0.2rem;
+    background: #162453da;
+    transition: all 300ms ease-in-out;
+}
+
+.menu ul li a:hover::after {
+    width: 50%;
+    left: 25%;
+}
+
+.espacamento-menu {
+    height: 6.5rem; /* Espaçamento criado somente para o nosso conteudo não ser coberto pelo menu que é fixo. */
+}
+
+.logo-content {  
+    position: relative; 
+    display: grid; /* Aqui foi decidido que usariamos uma grid para separar o texto da imagem no conteudo de introdução. */
+    grid-template-columns: 1fr 1.5fr; /* Grid configurada para ter somente 2 colunas. Sendo a segunda 50% maior que a primeira. */
+    gap: var(--gap); /* Gap de 30px entre uma coluna e outra. */
+    min-height: 100vh; /* Definindo que a altura dessa grid será de 100% do view height. */
+}
+
+.texto-logo, .imagem-logo {
+    display: flex; /* Definindo que o conteudo da coluna com texto será flex. Para podermos alinhar o conteudo ao centro da tela. */
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.imagem-logo img {
+    max-width: 100%; /* Pegando o tamanho maximo de 100% do elemento pai. Que no caso seria a classe .imagem-intro*/
+    height: auto;
+}
+
+.intro-content {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    max-width: 64rem;
+    text-align: center;
+}
+
+.top3-content {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    min-height: 100vh; /* Altura minima do viewport, se passar disso vai crescer. Quando for altura de algum content, usar min-height*/
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    counter-reset: contador-da-grid; /* Criando um contador para inserir numeros antes do h3. Pode receber qualquer nome. */
+}
+
+.grid h3 {
+    font-size: 3rem;
+    position: relative; /* Precisamos colocar posição relativa para que os numeros que vamos inserir abaixo se baseiem nessa posição. */
+    padding-left: 7.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.grid h3::before { /* Usando um pseudo-elemento para inserir algo antes de qualquer h3 dentro da classe .grid */
+    counter-increment: contador-da-grid; /* Deixando claro que o incremento vai ser do nome dado na counter-reset dentro da grid. */
+    content: counter(contador-da-grid); /* Expilcando o que deve conter antes do h3. No caso um contador. */
+    position: absolute; /* Só conseguimos definir essa posição absoluta porque nos baseamos na posição relativa do h3. */
+    font-size: 8rem;
+    font-style: italic;
+    top: -3.5rem;
+    left: -1rem;
+    transform: rotate(6deg); /* Rotacionando o eixo do elemento. 1deg = 1 grau. */
+}
+
+.grid-main-heading {
+    margin-bottom: 1rem;
+}
+
+.grid-description {
+    padding-bottom: 8rem;
+}
+
+.imagem-galeria {
+    width: 100%;
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow: hidden;
+}
+
+.imagem-galeria img {
+    transition: all 300ms ease-in-out; /* Efeito */
+}
+
+.imagem-galeria img:hover {
+    transform: translate(-3%, 3%) scale(1.2) rotate(5deg); /* Com o translate usou x e y como parametro, no scale aumentou em 20% o tamanho e no rotate rotacionou em 5 graus. */
+}
+
+.tabela-responsiva {
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.contact-form {
+    grid-column: span 2;
+}
+
+.contact-form .form-grid {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+
+.form-grid legend {
+    font-style: italic;
+    font-size: 1.9rem; 
+    margin-bottom: 3rem;
+}
+
+.form-group {
+    flex: 1 1 32rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.form-group input, .form-group textarea {
+    border: none;
+    background: var(--cor-branca);
+    border-radius: 0.2rem;
+    padding: 1rem 1rem;
+    width: 100%;
+    font-size: 2.2rem;
+}
+
+.full-width {
+    width: 100%;
+    flex: 1 1 100%;
+}
+
+.form-group button {
+    border: 0.5rem solid var(--cor-branca);
+    background: none;
+    color: var(--cor-branca);
+    padding: 1.5rem 2rem;
+    font-size: 2.2rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.form-group button:hover {
+    background: var(--cor-branca);
+    color: var(--cor-primaria);
+}
+
+.footer {
+    text-align: center;
+    color: var(--cor-primaria);
+    font-size: 1.6rem;
+}
+
+.footer p {
+    padding: 3rem;
+    margin: 0;
+}
+
+.close-menu {
+    display: none;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--cor-branca);
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--cor-primaria);
+    transform: rotate(-90deg);
+    border: 0.1rem solid var(--cor-primaria);
+}
+
+/* MEDIA QUERIES E BREAKPOINTS */
+
+@media (max-width: 800px) {
+    .logo-content, .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .imagem-galeria {
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .imagem-galeria img {
+        width: 100%;
+    }
+
+    .menu {
+        bottom: 0;
+        text-align: center;
+        display: none;
+    }
+
+    .menu-content, .menu-content ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .menu-content {
+        height: 100vh;
+    }
+
+    .close-menu-label::after {
+        content: '☰';
+        position: fixed;
+        z-index: 2;
+        top: 2rem;
+        right: 2rem;
+        background: var(--cor-primaria);
+        color: var(--cor-branca);
+        font-size: 3rem;
+        line-height: 3rem;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+
+    .close-menu:checked~.menu {
+        display: block;
+    }
+
+    .close-menu:checked~.close-menu-label::after {
+        content: '×';
+    }
+
+    .espacamento-menu {
+        display: none;
+    }
+}

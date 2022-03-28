@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <input id="close-menu" class="close-menu" type="checkbox" aria-label="Fechar o menu" role="button">
+    <label class="close-menu-label" for="close-menu" title="fechar o menu"></label>
+    <aside class="menu white-bg">
+        <div class="main-content menu-content"> 
+            <h1 onclick="getElementById('close-menu').checked = false;">
+                <a href="#logo">logo</a>
+            </h1>
+            <nav>
+                <ul onclick="getElementById('close-menu').checked = false;">
+                    <li><a href="#intro">intro</a></li>
+                    <li><a href="#top3">top 3</a></li>
+                    <li><a href="#gallery">gallery</a></li>
+                    <li><a href="#work">work</a></li>
+                    <li><a href="#pricing">pricing</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
+    <div class="espacamento-menu"></div>
+
+    <section id="logo" class="main-bg section">
+        <div class="main-content logo-content">
+            <div class="texto-logo">
+                <h2>January brings us Firefox 85</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis culpa error vitae quam debitis, cumque perferendis, at iusto laborum alias itaque? Accusantium culpa odit, dolores aliquam necessitatibus quam nemo molestiae?</p>
+            </div>
+            <div class="imagem-logo">
+                <img src="IMG/imagem-da-intro.svg" alt="Imagem de introdução ao site.">
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="intro" class="white-bg section">
+        <div class="main-content intro-content">
+            <div>
+                <h2>Top 3 jobs</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque architecto facere voluptatum suscipit expedita! Accusamus id eligendi atque praesentium! Reiciendis, est recusandae consectetur voluptates molestiae laborum ratione iste minima eveniet.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis necessitatibus voluptatum molestiae beatae ullam, cupiditate, soluta temporibus quis pariatur voluptatem, impedit voluptas laborum magnam! Ipsum at blanditiis obcaecati harum provident.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam eum beatae quidem voluptas aspernatur atque officia. Quis cupiditate hic, iste officiis tempora deleniti non in. Placeat error natus odit repellendus?</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="top3" class="main-bg section">
+        <div class="main-content top3-content">
+            <h2 class="grid-main-heading">Top 3 jobs</h2>
+            <p class="grid-description">Here are some recent work.</p>
+            <div class="grid">
+                <article>
+                    <h3>First</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, inventore. Doloremque, omnis corporis tempo</p>
+                </article>
+                <article>
+                    <h3>Another site</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam amet corrupti consequuntur, pariatur quod quam. Magnam dignissimos maxime a, itaque at expedita voluptatem aperiam sunt, suscipit consequatur doloremque officia sit!</p>
+                </article>
+                <article>
+                    <h3>Third one</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, excepturi. Consequuntur iusto optio nemo</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="white-bg section">
+        <div class="main-content gallery-content">
+            <h2 class="grid-main-heading">Gallery</h2>
+            <p class="grid-description">Here are some of my pics.</p>
+            <div class="grid">
+                <div class="imagem-galeria">
+                    <img src="https://source.unsplash.com/random/360x360?r=1" alt="Imagem randomica"> <!-- https://source.unsplash.com/random/360x360 - site unsplash. Para pegar imagens randomicas no tamanho que quiser. -->
+                </div>
+                <div class="imagem-galeria">
+                    <img src="https://source.unsplash.com/random/360x360?r=2" alt="Imagem randomica">
+                </div>
+                <div class="imagem-galeria">
+                    <img src="https://source.unsplash.com/random/360x360?r=3" alt="Imagem randomica">
+                </div>
+                <div class="imagem-galeria">
+                    <img src="https://source.unsplash.com/random/360x360?r=4" alt="Imagem randomica">
+                </div>
+                <div class="imagem-galeria">
+                    <img src="https://source.unsplash.com/random/360x360?r=5" alt="Imagem randomica">
+                </div>
+                <div class="imagem-galeria">
+                    <img src="https://source.unsplash.com/random/360x360?r=6" alt="Imagem randomica">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="main-bg section">
+        <div class="main-content top3-content">
+            <h2 class="grid-main-heading">Recent jobs</h2>
+            <p class="grid-description"></p>
+            <div class="grid">
+                <article>
+                    <h3>A good one</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, inventore. Doloremque, omnis corporis tempo</p>
+                </article>
+                <article>
+                    <h3>Great job</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam amet corrupti consequuntur, pariatur quod quam. Magnam dignissimos maxime a, itaque at expedita voluptatem aperiam sunt, suscipit consequatur doloremque officia sit!</p>
+                </article>
+                <article>
+                    <h3>The best</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, excepturi. Consequuntur iusto optio nemo</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="white-bg section">
+        <div class="main-content intro-content"> 
+            <h2>Pricing</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sed, architecto blanditiis veritatis dolor esse libero laborum odit dolorem aperiam ex id maxime cupiditate dolore, praesentium beatae impedit autem! Quae!</p>
+            <div class="tabela-responsiva"> <!-- Para fazer uma tabela responsiva é preciso envolve-la com uma div. -->
+                <table>
+                    <caption>Princing table</caption>
+                        
+                    <thead>
+                        <tr>
+                            <th>Title 1</th>
+                            <th>Title 2</th>
+                            <th>Title 3</th>
+                            <th>Title 4</th>
+                            <th>Title 5</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Content 1</td>
+                            <td>Content 2</td>
+                            <td>Content 3</td>
+                            <td>Content 4</td>
+                            <td>Content 5</td>
+                        </tr>
+                        <tr>
+                            <td>Content 1</td>
+                            <td>Content 2</td>
+                            <td>Content 3</td>
+                            <td>Content 4</td>
+                            <td>Content 5</td>
+                        </tr>
+                        <tr>
+                            <td>Content 1</td>
+                            <td>Content 2</td>
+                            <td>Content 3</td>
+                            <td>Content 4</td>
+                            <td>Content 5</td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td colspan="3">Testando</td>
+                        </tr>
+                    </tfoot>
+
+                </table>
+            </div>    
+        </div>
+    </section>
+
+    <section id="contact" class="main-bg section">
+        <div class="main-content logo-content">
+            <div class="texto-logo">
+                <h2>Contact us</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis culpa error vitae quam debitis, cumque perferendis, at iusto laborum alias itaque? Accusantium culpa odit, dolores aliquam necessitatibus quam nemo molestiae?</p>
+            </div>
+            <div class="imagem-logo">
+                <img src="IMG/imagem-da-intro.svg" alt="Imagem de introdução ao site.">
+            </div>
+            <div class="contact-form">
+                <fieldset class="form-grid">
+                    <legend>Contact me</legend>
+                    <div class="form-group">
+                        <label for="primeiro-nome">Primeiro nome:</label>
+                        <input type="text" name="primeiro-nome" id="primeiro-nome" placeholder="Seu nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="ultimo-nome">Sobrenome:</label>
+                        <input type="text" name="ultimo-nome" id="ultimo-nome" placeholder="Seu sobrenome">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="Seu email">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="message">Mensagem:</label>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Sua mensagem"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Send message</button>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class=" footer white-bg">
+        <p>Feito por Gabriel Oliveira com o acompanhamento do Professor Otavio Miranda.</p>
+    </footer>
+
+    <a class="back-to-top" href="#">➤</a>
+</body>
+</html>
